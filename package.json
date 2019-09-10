@@ -19,6 +19,7 @@
     "bs-css": "^10.0.0",
     "bs-emotion": "^0.1.1",
     "emotion": "^10.0.17",
+    "file-loader": "^4.2.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "reason-react": ">=0.7.0"
