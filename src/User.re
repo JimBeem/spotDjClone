@@ -25,6 +25,7 @@ let make = () => {
         },
       {isDropdownOpen: false},
     );
+
   <header className={Css.flexWrapper(~justify=`flexEnd, ~align=`center)}>
     <div style={ReactDOMRe.Style.make(~width="100px", ())}>
       <Dropdown isOpen={state.isDropdownOpen} toggle={() => action(Toggle)}>
