@@ -5,10 +5,8 @@ module Css = AppStyle;
 let make = () => {
   <div className=Css.app>
     <User />
-    <h1> {string("Welcome to SpotDJ")} </h1>
+    <h1 className=Css.pageTitle> {string("Welcome to SpotDJ")} </h1>
     <LinkShare />
-    <div className="current-playing">
-      <p> {string("Played by userABC")} </p>
-    </div>
+    <CurrentlyPlaying />
   </div>;
 };
