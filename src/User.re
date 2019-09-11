@@ -1,5 +1,6 @@
 open Utils;
 open BsReactstrap;
+open Css;
 module Css = AppStyle;
 
 type action =
@@ -8,6 +9,11 @@ type action =
 type state = {isDropdownOpen: bool};
 
 let userIcon = requireAssetURI("./img/user.png");
+
+let userAccountWrapper =
+  style([
+    padding4(~top=`px(16), ~right=`px(24), ~bottom=`px(0), ~left=`px(24)),
+  ]);
 
 [@react.component]
 let make = () => {
@@ -19,15 +25,15 @@ let make = () => {
         },
       {isDropdownOpen: false},
     );
-  <header className=Css.flexWrapperRightAlign>
+  <header className={Css.flexWrapper(~justify=`flexEnd, ~align=`center)}>
     <div style={ReactDOMRe.Style.make(~width="100px", ())}>
       <Dropdown isOpen={state.isDropdownOpen} toggle={() => action(Toggle)}>
         <DropdownToggle
           caret=true
           tag="div"
           className={Cn.make([
-            Css.flexWrapperRightAlign,
-            Css.userAccountWrapper,
+            Css.flexWrapper(~justify=`flexEnd, ~align=`center),
+            userAccountWrapper,
           ])}>
           <img className=Css.userIcon src=userIcon alt="user icon" />
           <p style={ReactDOMRe.Style.make(~margin="0px", ())}>

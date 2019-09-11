@@ -22,7 +22,7 @@ let make = () => {
     </p>
     <div
       style={ReactDOMRe.Style.make(~width="fit-content", ~margin="auto", ())}>
-      <div className={Css.flexWrapper(~justify=`center)} />
+      <div className={Css.flexWrapper(~justify=`center, ~align=`center)} />
       <input
         className=Css.shareLinkURL
         value="www.example.com/?userId"
@@ -39,7 +39,7 @@ let make = () => {
       </Dropdown>
       <div
         className={Cn.make([
-          Css.flexWrapper(~justify=`flexStart),
+          Css.flexWrapper(~justify=`flexStart, ~align=`center),
           Css.subInfo,
         ])}>
         <p> <i> {string("240 Listners")} </i> </p>

@@ -1,6 +1,5 @@
 open Utils;
 open ReasonReact;
-open BsReactstrap;
 
 module Css = AppStyle;
 
@@ -26,7 +25,10 @@ let make = () => {
       />
       <div className=Css.songImageFilter />
       <div
-        className={Cn.make([Css.flexWrapper(`spaceAround), Css.songInfo])}>
+        className={Cn.make([
+          Css.flexWrapper(~justify=`spaceAround, ~align=`center),
+          Css.songInfo,
+        ])}>
         <img className="audio-wave" src=audioWave alt="Audio Wave" />
         <div>
           <h3 className="song-name"> {string("Song Name")} </h3>
