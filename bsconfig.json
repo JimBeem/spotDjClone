@@ -19,7 +19,8 @@
     "reason-react",
     "bs-emotion",
     "bs-css",
-    "@ahrefs/bs-reactstrap"
+    "@ahrefs/bs-reactstrap",
+    "re-classnames"
   ],
   "refmt": 3
 }
